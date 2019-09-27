@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="./myStyle.css">
+  </head>
+  <body>
+    <!-- Famous Quotes API display -->
+    <div class="container mt-4">
+      <p>Click on the quote to show the next</p>
+      <h4 id="quote" class="text-center mb-3"></h4>
+      <p id="author" class="text-center mb-4"></p>
+    </div>
+
+    <!-- Google Translate API display -->
+    <div class="container mt-5">
+      <p id="translateHead">Translate words to Spanich:</p>
+      <input type="text" id="transla" class="form-control"> 
+      <input type="submit" id="trans" value="Translate" class="btn btn-primary btn-block">
+      <h4 id="translatedFrom" class="text-center mb-4"></h4>
+      <h4 id="translatedText" class="text-center mb-4"></h4>
+    </div>
+    <script src="./myScript.js"></script>
+  </body>
+</html>
