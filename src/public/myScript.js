@@ -29,15 +29,25 @@ setTimeout(function () {
   document.getElementById('translatedText').innerHTML =  translatedFromAPI;
 }, 500);
 
-document.getElementById("quote").addEventListener("click", nextQuote);
+document.getElementById("pre").addEventListener("click", preQuote);
+document.getElementById("next").addEventListener("click", nextQuote);
 document.getElementById("trans").addEventListener("click", translateTheWord);
 
+function preQuote() {
+  if (counter <= 0) { // I can only get 10 quotes 
+    counter = 10;
+  }
+  document.getElementById('quote').innerHTML = '"' + quotesFromAPI[--counter].quote + '"';
+  document.getElementById('author').innerHTML =  quotesFromAPI[counter].author;
+}
+
 function nextQuote() {
+  if (counter >= 9) { // I can only get 10 quotes 
+    counter = -1;
+  }
   document.getElementById('quote').innerHTML = '"' + quotesFromAPI[++counter].quote + '"';
   document.getElementById('author').innerHTML =  quotesFromAPI[counter].author;
-  if (counter >= 9) { // I can only get 10 quotes 
-    counter = 0;
-  }
+  document.getElementById('tesst').innerHTML = ' ' + counter;
 }
 
 function translateTheWord() {
