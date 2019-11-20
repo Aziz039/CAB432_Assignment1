@@ -28,7 +28,7 @@ app.get('/api/translated', (req, res) => {
 	// get word from cookie or default to hello
 	text =  parseCookies(req).translateFrom || 'hello';
 	// my API
-	var api = "AIzaSyA5gK46O4OiVxQrKHYi5fWQK8cb4tqUIFU";
+	var api = "KEY";
 	// translate words from api
     var googleTranslate = require('google-translate')(api);
 	googleTranslate.translate(text, 'es', function(err, translation) {
