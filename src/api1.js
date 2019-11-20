@@ -11,7 +11,7 @@ req.query({
 // headers 
 req.headers({
 	'x-rapidapi-host' : 'andruxnet-random-famous-quotes.p.rapidapi.com',
-	'x-rapidapi-key'  : '8ff3cfc964msh72f4c98a80b01f1p1e90c5jsn418d6d2862e8',
+	'x-rapidapi-key'  : 'KEY',
 	'content-type'    : 'application/x-www-form-urlencoded'
 });
 req.form({});
